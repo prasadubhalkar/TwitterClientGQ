@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "target": "es5",
+        "module": "commonjs",
+        "skipLibCheck": true,
+        "jsx": "react",
+        "lib": [
+            "es2015",
+            "esnext"
+        ]
+    },
+    "include": [
+        "./server/**/*"
+    ],
+    "tslint": {
+        "args": ["--project", "./"]
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        ".git"
+    ]
+}

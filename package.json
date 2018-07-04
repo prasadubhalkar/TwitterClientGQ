@@ -1,0 +1,32 @@
+{
+  "name": "twitterclient",
+  "version": "0.0.1",
+  "description": "GraphQL Wrapper Around Twitter Rest API ",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && cd dist && node index.js",
+    "start": "nodemon --watch server/ -e ts --ignore dist --exec npm run-script build",
+    "test": "test"
+  },
+  "keywords": [
+    "graphql",
+    "twitter",
+    "rest",
+    "api"
+  ],
+  "author": "Prasad Ubhalkar",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/express-graphql": "^0.6.1",
+    "@types/graphql": "^0.13.3",
+    "@types/node": "^10.5.1",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
