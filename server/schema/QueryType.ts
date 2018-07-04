@@ -7,7 +7,7 @@ import TweetType from "./TweetType";
 import TwitterApi from "../TwitterApi";
 
 const fetchTweets = async () => {
-  let response = await TwitterApi.Instance.search("#CapitalOne");
+  let response = await TwitterApi.Instance.search("#WorldCup2018");
   return response.statuses;
 }
 
