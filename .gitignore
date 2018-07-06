@@ -1,0 +1,4 @@
+startScript.sh
+node_modules/
+yarn.lock
+dist/

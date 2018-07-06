@@ -4,8 +4,9 @@
   "description": "GraphQL Wrapper Around Twitter Rest API ",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && cd dist && node index.js",
-    "start": "nodemon --watch server/ -e ts --ignore dist --exec npm run-script build",
+    "build": "rimraf dist && webpack --config ./config/webpack.config.js --mode development",
+    "server": "npm run build && cd dist && node server.js",
+    "start": "nodemon --watch server/ -e ts --ignore dist --exec npm run-script server",
     "test": "test"
   },
   "keywords": [
@@ -21,12 +22,25 @@
     "@types/express-graphql": "^0.6.1",
     "@types/graphql": "^0.13.3",
     "@types/node": "^10.5.1",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "twitter": "^1.7.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5"
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "copy-webpack-plugin": "^4.5.2",
+    "nodemon": "^1.17.5",
+    "typescript": "^2.9.2",
+    "webpack": "^4.15.1",
+    "webpack-command": "^0.4.0",
+    "webpack-node-externals": "^1.7.2"
   }
 }
